@@ -1,0 +1,757 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Chettinadu Catering Service</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif;}
+body{background:#fafafa;color:#222;}
+header{background:#fff;box-shadow:0 2px 5px rgba(0,0,0,0.1);padding:15px 50px;display:flex;justify-content:space-between;align-items:center;position:sticky;top:0;z-index:1000;}
+.logo{font-size:24px;font-weight:700;color:#b3123a;}
+nav a{margin:0 15px;text-decoration:none;color:#333;font-weight:500;}
+.btn{background:#b3123a;color:#fff;padding:8px 18px;border-radius:25px;text-decoration:none; cursor:pointer; border:none;}
+.hero{
+  background:
+    linear-gradient(rgba(179,18,58,0.7), rgba(179,18,58,0.7)),
+    url('https://images.unsplash.com/photo-1604908177522-4026c8f1f14a') center/cover;
+  height:80vh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  color:#fff;
+  text-align:center;
+}
+.hero h1{font-size:48px;margin-bottom:10px;}
+.section{
+  padding:60px 50px;
+  background: linear-gradient(rgba(179,18,58,0.05), rgba(179,18,58,0.05));
+}
+
+.section h2{
+  text-align:center;
+  margin-bottom:40px;
+  font-size:32px;
+  color:#b3123a;
+  text-transform:uppercase;
+  letter-spacing:1px;
+}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:25px;}
+.card{background:#fff;border-radius:15px;overflow:hidden;box-shadow:0 3px 10px rgba(0,0,0,0.1);}
+.card img{width:100%;height:180px;object-fit:cover;}
+.card h3{padding:15px;font-size:18px;}
+.menu{background:#fff5f7;}
+.menu ul{columns:3;list-style:disc;padding:20px 80px;}
+.menu li{margin:8px 0;}
+.contact{display:grid;grid-template-columns:1fr 1fr;gap:30px;}
+iframe{width:100%;height:300px;border-radius:15px;}
+.footer{background:#111;color:#fff;padding:40px 50px;display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:20px;}
+.footer h3{margin-bottom:15px;color:#f2b45a;}
+.footer a{display:block;color:#ccc;text-decoration:none;margin:5px 0;}
+
+/* NEW POPUP STYLES */
+.modal{display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.7); justify-content:center; align-items:center; z-index:2000;}
+.modal-box{background:#fff; padding:30px; width:350px; border-radius:15px; text-align:center;}
+.modal-box h2{color:#b3123a; margin-bottom:15px;}
+.modal-box input, .modal-box select{width:100%; padding:10px; margin:8px 0; border:1px solid #ccc; border-radius:6px;}
+.modal-box button{width:100%; padding:10px; background:#b3123a; color:#fff; border:none; border-radius:20px; margin-top:10px; cursor:pointer; font-weight:bold;}
+#closeModal{display:block; margin-top:15px; color:red; cursor:pointer; font-weight:bold;}
+
+@media(max-width:768px){
+.hero h1{font-size:32px;}
+.menu ul{columns:1;padding:20px;}
+.contact{grid-template-columns:1fr;}
+}
+</style>
+</head>
+<body>
+
+<header>
+<div class="logo">Chettinadu Catering</div>
+<nav>
+<a href="#home">Home</a>
+<a href="#about">About</a>
+<a href="#menu">Menu</a>
+<a href="#gallery">Gallery</a>
+<a href="#blog">Blogs</a>
+<a href="#contact">Contact</a>
+<a href="#" class="btn" id="openBooking">Book Now</a>
+</nav>
+</header>
+
+<section class="hero" id="home">
+<div>
+<h1>Delicious Catering for Every Occasion</h1>
+<p>Since 2010 | Quality & Taste Guaranteed</p>
+</div>
+</section>
+
+<section class="section" id="about">
+<h2>About Us</h2>
+<p style="text-align:center;max-width:800px;margin:auto;">We prepare food just like your home in large quantity. Our professional team delivers unforgettable taste for weddings, birthdays, corporate events and more.</p>
+</section>
+
+<section class="section menu" id="menu">
+<section id="menu" class="section menu">
+
+<section id="menu" class="section menu">
+
+<h2 style="text-align:center;">🍽️ MASTER MENU</h2>
+
+
+<!-- MORNING -->
+<h3>🌅 1️⃣ MORNING TIFFIN</h3>
+
+<h4>▶ Idli Varieties</h4>
+<ul>
+  <li>Plain Idli</li>
+  <li>Mini Idli</li>
+  <li>Rava Idli</li>
+  <li>Kanchipuram Idli</li>
+  <li>Kari Idli</li>
+  <li>Thatte Idli</li>
+  <li>Vegetable Idli</li>
+  <li>Oats Idli</li>
+  <li>Millet Idli</li>
+  <li>Masala Idli</li>
+</ul>
+
+<h4>▶ Dosa Varieties</h4>
+<ul>
+  <li>Plain Dosa</li>
+  <li>Masala Dosa</li>
+  <li>Ghee Dosa</li>
+  <li>Podi Dosa</li>
+  <li>Onion Dosa</li>
+  <li>Rava Dosa</li>
+  <li>Paper Dosa</li>
+  <li>Chettinad Dosa</li>
+  <li>Paneer Dosa</li>
+  <li>Mushroom Dosa</li>
+  <li>Egg Dosa</li>
+  <li>Cheese Dosa</li>
+  <li>Mushroom Masala Dosa</li>
+  <li>Corn Dosa</li>
+  <li>Beetroot Dosa</li>
+  <li>Tomato Dosa</li>
+  <li>Special Mix Dosa</li>
+  <li>Ghee Roast</li>
+  <li>Kal Dosa</li>
+  <li>Butter Dosa</li>
+</ul>
+
+<h4>▶ Pongal / Upma</h4>
+<ul>
+  <li>Ven Pongal</li>
+  <li>Ghee Pongal</li>
+  <li>Pepper Pongal</li>
+  <li>Samba Pongal</li>
+  <li>Rava Upma</li>
+  <li>Sevai Upma</li>
+  <li>Vegetable Upma</li>
+  <li>Keerai (Spinach) Upma</li>
+</ul>
+>
+
+
+<h2>🍱 2️⃣ AFTERNOON LUNCH – MEGA MENU</h2>
+
+<!-- VEG MEALS -->
+<h3>🥬 VEG FULL MEALS</h3>
+
+<h4>▶ Full Meals</h4>
+<ul>
+<li>South Indian Full Meals</li>
+<li>Chettinad Meals</li>
+<li>Andhra Meals</li>
+<li>Mini Meals</li>
+<li>Deluxe Meals</li>
+<li>Executive Meals</li>
+<li>Special Thali</li>
+<li>North Indian Thali</li>
+<li>Jain Meals</li>
+</ul>
+
+
+<!-- VARIETY RICE -->
+<h4>▶ Variety Rice</h4>
+<ul>
+<li>Lemon Rice</li>
+<li>Tomato Rice</li>
+<li>Tamarind Rice</li>
+<li>Coconut Rice</li>
+<li>Mint Rice</li>
+<li>Coriander Rice</li>
+<li>Mango Rice</li>
+<li>Curd Rice</li>
+<li>Spinach Rice</li>
+<li>Sesame Rice</li>
+<li>Garlic Rice</li>
+<li>Jeera Rice</li>
+<li>Ghee Rice</li>
+<li>Vegetable Pulao</li>
+</ul>
+
+
+<!-- KUZHAMBHU -->
+<h4>▶ Kuzhambu / Gravy</h4>
+<ul>
+<li>Sambar</li>
+<li>Rasam</li>
+<li>Mor Kuzhambu</li>
+<li>Vatha Kuzhambu</li>
+<li>Puli Kuzhambu</li>
+<li>Garlic Kuzhambu</li>
+<li>Pepper Kuzhambu</li>
+<li>Drumstick Kuzhambu</li>
+<li>Brinjal Kuzhambu</li>
+<li>Ladies Finger Kuzhambu</li>
+<li>Paneer Kuzhambu</li>
+<li>Mushroom Kuzhambu</li>
+<li>Kara Kuzhambu</li>
+<li>Kootu Kuzhambu</li>
+</ul>
+
+
+<!-- PORIYAL -->
+<h4>▶ Poriyal / Kootu / Aviyal</h4>
+<ul>
+<li>Beans Poriyal</li>
+<li>Cabbage Poriyal</li>
+<li>Carrot Poriyal</li>
+<li>Beetroot Poriyal</li>
+<li>Spinach Poriyal</li>
+<li>Plantain Fry</li>
+<li>Cluster Beans Poriyal</li>
+<li>Snake Gourd Poriyal</li>
+<li>Aviyal</li>
+<li>Mixed Veg Kootu</li>
+<li>Pumpkin Kootu</li>
+<li>Bottle Gourd Kootu</li>
+<li>Chow Chow Kootu</li>
+<li>Drumstick Leaves Kootu</li>
+</ul>
+
+
+<!-- FRY -->
+<h4>▶ Fry / Roast Items</h4>
+<ul>
+<li>Potato Fry</li>
+<li>Ladies Finger Fry</li>
+<li>Bitter Gourd Fry</li>
+<li>Yam Fry</li>
+<li>Garlic Fry</li>
+<li>Paneer Fry</li>
+<li>Mushroom Fry</li>
+<li>Cauliflower Fry</li>
+<li>Gobi Manchurian</li>
+<li>Baby Corn Fry</li>
+</ul>
+
+
+<!-- CURD / RAITA -->
+<h4>▶ Curd / Raita / Pickle</h4>
+<ul>
+<li>Plain Curd</li>
+<li>Curd Rice</li>
+<li>Onion Raita</li>
+<li>Boondi Raita</li>
+<li>Veg Raita</li>
+<li>Mango Pickle</li>
+<li>Lemon Pickle</li>
+<li>Ginger Pickle</li>
+<li>Garlic Pickle</li>
+</ul>
+
+<h3>🍗 NON-VEG LUNCH SPECIALS</h3>
+
+
+<!-- CHICKEN -->
+<h4>▶ Chicken Varieties</h4>
+<ul>
+<li>Chicken Curry</li>
+<li>Chicken Chettinad</li>
+<li>Chicken Masala</li>
+<li>Butter Chicken</li>
+<li>Chicken Pepper Fry</li>
+<li>Chicken Sukka</li>
+<li>Chicken 65</li>
+<li>Chicken Roast</li>
+<li>Chicken Lollipop</li>
+<li>Chicken Manchurian</li>
+<li>Chicken Chops</li>
+<li>Chicken Kebab</li>
+<li>Chicken Tikka Masala</li>
+<li>Chicken Kurma</li>
+<li>Chicken Gravy</li>
+</ul>
+
+
+<!-- MUTTON -->
+<h4>▶ Mutton Varieties</h4>
+<ul>
+<li>Mutton Curry</li>
+<li>Mutton Chukka</li>
+<li>Mutton Sukka</li>
+<li>Mutton Pepper Fry</li>
+<li>Mutton Masala</li>
+<li>Mutton Chops</li>
+<li>Mutton Liver Fry</li>
+<li>Mutton Brain Fry</li>
+<li>Mutton Keema</li>
+<li>Mutton Kola Urundai</li>
+<li>Mutton Kurma</li>
+<li>Mutton Gravy</li>
+</ul>
+
+
+<!-- FISH -->
+<h4>▶ Fish Varieties</h4>
+<ul>
+<li>Fish Fry</li>
+<li>Fish Curry</li>
+<li>Fish Masala</li>
+<li>Fish Tikka</li>
+<li>Fish Pepper Fry</li>
+<li>Fish Roast</li>
+<li>Fish Pulusu</li>
+<li>Fish Gravy</li>
+<li>Fish Pakoda</li>
+</ul>
+
+
+<!-- PRAWN -->
+<h4>▶ Prawn Varieties</h4>
+<ul>
+<li>Prawn Masala</li>
+<li>Prawn Fry</li>
+<li>Prawn Curry</li>
+<li>Pepper Prawn</li>
+<li>Garlic Prawn</li>
+<li>Chilli Prawn</li>
+<li>Butter Prawn</li>
+<li>Prawn Roast</li>
+</ul>
+
+
+<!-- EGG -->
+<h4>▶ Egg Varieties</h4>
+<ul>
+<li>Egg Curry</li>
+<li>Egg Masala</li>
+<li>Egg Podimas</li>
+<li>Egg Roast</li>
+<li>Omelette</li>
+<li>Egg Bhurji</li>
+<li>Egg Pepper Fry</li>
+</ul>
+
+
+
+<!-- RICE + NON VEG -->
+<h4>▶ Rice with Non-Veg</h4>
+<ul>
+<li>Chicken Fried Rice</li>
+<li>Egg Fried Rice</li>
+<li>Prawn Fried Rice</li>
+<li>Mixed Fried Rice</li>
+<li>Schezwan Chicken Rice</li>
+<li>Butter Chicken Rice</li>
+<li>Mutton Fried Rice</li>
+</ul>
+
+
+<!-- GRAVY WITH ROTI -->
+<h4>▶ Roti / Naan with Gravy</h4>
+<ul>
+<li>Butter Naan + Chicken Curry</li>
+<li>Plain Roti + Mutton Masala</li>
+<li>Garlic Naan + Butter Chicken</li>
+<li>Rumali Roti + Chicken Kurma</li>
+<li>Parotta + Salna</li>
+<li>Kothu Parotta</li>
+<li>Chicken Kothu Parotta</li>
+<li>Mutton Kothu Parotta</li>
+</ul>
+
+<!-- ================= END LUNCH ================= -->
+
+
+<h3>🍬 4️⃣ SWEETS</h3>
+
+<h4>▶ Halwa</h4>
+<ul>
+  <li>Wheat Halwa</li>
+  <li>Badam Halwa</li>
+  <li>Jaggery Wheat Halwa</li>
+  <li>Carrot Halwa</li>
+  <li>Sapota Halwa</li>
+  <li>Tender Coconut Halwa</li>
+  <li>Bread Halwa</li>
+  <li>Black Rice Halwa</li>
+</ul>
+
+<h4>▶ Kesari & Sweet Varieties</h4>
+<ul>
+  <li>Fruit Kesari</li>
+  <li>Pineapple Kesari</li>
+  <li>Ukkarai</li>
+</ul>
+
+<h4>▶ Payasam / Kheer</h4>
+<ul>
+  <li>Jackfruit Payasam</li>
+  <li>Milk Payasam</li>
+  <li>Milk Ada Pradhaman</li>
+  <li>Semiya Payasam</li>
+  <li>Rice Payasam</li>
+  <li>Black Rice Payasam</li>
+</ul>
+
+<h4>▶ Traditional Sweets</h4>
+<ul>
+  <li>Rangoon Puttu</li>
+  <li>Red Rice Puttu</li>
+  <li>Thenkuzhal</li>
+  <li>Adhirasam</li>
+  <li>Sweet Paniyaram</li>
+  <li>Laddu</li>
+  <li>Gulab Jamun</li>
+  <li>Rasgulla</li>
+  <li>Mysore Pak</li>
+  <li>Basundi</li>
+  <li>Rasmalai</li>
+  <li>Shahi Tukda</li>
+</ul>
+
+<h4>▶ Ice Cream</h4>
+<ul>
+  <li>Vanilla Ice Cream</li>
+  <li>Chocolate Ice Cream</li>
+  <li>Strawberry Ice Cream</li>
+  <li>Butterscotch Ice Cream</li>
+  <li>Mango Ice Cream</li>
+  <li>Dry Fruit Ice Cream</li>
+</ul>
+
+
+<!-- NON VEG -->
+<h3>🍗 5️⃣ NON-VEG</h3>
+
+<h4>▶ Chicken</h4>
+<ul>
+<li>Chicken 65</li>
+<li>Chicken Fry</li>
+<li>Butter Chicken</li>
+<li>Chicken Tikka</li>
+<li>Chicken Chettinad</li>
+<li>Chicken Curry</li>
+<li>chicken manchurian</li>
+<li>pepper chicken</li>
+<li>chicken curry</li>
+<li>chicken gravy</li>
+<li>chicken pallipalayam</li>
+</ul>
+
+<h4>▶ Mutton</h4>
+<ul>
+<li>Mutton Curry</li>
+<li>Mutton Chops</li>
+<li>Mutton Sukka</li>
+<li>Mutton soup</li>
+<li>Mutton garvy</li>
+<li>Mutton Keema</li>
+<li>Mutton balls</li>
+</ul>
+
+<h4>▶ Fish & Prawn</h4>
+<ul>
+<li>Fish Fry</li>
+<li>Fish Curry</li>
+<li>Prawn Masala</li>
+<li>Prawn Fry</li>
+<li>Chilli Prawn</li>
+</ul>
+
+
+<!-- ================= BIRYANI SECTION ================= -->
+
+<h3>🍚 6️⃣ BIRYANI VARIETIES</h3>
+
+<!-- Chicken Biryani -->
+<h4>▶ Chicken Biryani</h4>
+<ul>
+  <li>Chicken Dum Biryani</li>
+  <li>Chicken Hyderabadi Biryani</li>
+  <li>Chicken Chettinad Biryani</li>
+  <li>Chicken Ambur Biryani</li>
+  <li>Chicken Fried Biryani</li>
+  <li>Chicken 65 Biryani</li>
+  <li>Chicken Pepper Biryani</li>
+  <li>Chicken Tikka Biryani</li>
+  <li>Chicken Butter Biryani</li>
+  <li>Chicken Kolkata Biryani</li>
+</ul>
+
+<!-- Paneer Biryani -->
+<h4>▶ Paneer Biryani</h4>
+<ul>
+  <li>Paneer Dum Biryani</li>
+  <li>Paneer Tikka Biryani</li>
+  <li>Paneer Butter Biryani</li>
+  <li>Paneer Hyderabadi Biryani</li>
+  <li>Paneer Veg Special Biryani</li>
+  <li>Paneer Masala Biryani</li>
+</ul>
+
+<!-- Mushroom Biryani -->
+<h4>▶ Mushroom Biryani</h4>
+<ul>
+  <li>Mushroom Dum Biryani</li>
+  <li>Pepper Mushroom Biryani</li>
+  <li>Mushroom Chettinad Biryani</li>
+  <li>Mushroom Hyderabadi Biryani</li>
+  <li>Butter Mushroom Biryani</li>
+  <li>Spicy Mushroom Biryani</li>
+</ul>
+
+<!-- Prawn Biryani -->
+<h4>▶ Prawn Biryani</h4>
+<ul>
+  <li>Prawn Dum Biryani</li>
+  <li>Prawn Masala Biryani</li>
+  <li>Pepper Prawn Biryani</li>
+  <li>Garlic Prawn Biryani</li>
+  <li>Prawn Hyderabadi Biryani</li>
+  <li>Butter Prawn Biryani</li>
+</ul>
+
+<!-- Veg Biryani -->
+<h4>▶ Veg Biryani</h4>
+<ul>
+  <li>Veg Dum Biryani</li>
+  <li>Hyderabadi Veg Biryani</li>
+  <li>Kashmiri Veg Biryani</li>
+  <li>Paneer Veg Biryani</li>
+  <li>Special Veg Biryani</li>
+</ul>
+
+
+<!-- ICE CREAM -->
+<h3>🍨 7️⃣ ICE CREAMS</h3>
+<ul>
+<li>Vanilla</li>
+<li>Chocolate</li>
+<li>Strawberry</li>
+<li>Butterscotch</li>
+<li>Mango</li>
+<li>Pista</li>
+<li>Black Current</li>
+<li>Dry Fruit</li>
+</ul>
+
+
+<!-- JUICE -->
+<h3>🥤 8️⃣ JUICES & SHAKES</h3>
+<ul>
+<li>Orange Juice</li>
+<li>Apple Juice</li>
+<li>Watermelon Juice</li>
+<li>Mosambi Juice</li>
+<li>Mango Shake</li>
+<li>Chocolate Shake</li>
+<li>Strawberry Shake</li>
+</ul>
+
+
+<!-- SOUP -->
+<h3>🥣 9️⃣ SOUPS</h3>
+<ul>
+<li>Tomato Soup</li>
+<li>Sweet Corn Soup</li>
+<li>Veg Clear Soup</li>
+<li>Chicken Soup</li>
+<li>Mushroom Soup</li>
+<li>Hot & Sour Soup</li>
+</ul>
+
+
+<!-- FRUITS -->
+<h3>🍎 🔟 FRUITS & SALADS</h3>
+<ul>
+<li>Fruit Salad</li>
+<li>Apple</li>
+<li>Orange</li>
+<li>Banana</li>
+<li>Papaya</li>
+<li>Pineapple</li>
+<li>Grapes</li>
+<li>Mixed Fruits</li>
+</ul>
+
+
+</section>
+</section>
+
+</section>
+
+
+<section class="section" id="gallery">
+<h2>Gallery</h2>
+
+<div class="cards">
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1555939594-58d7cb561ad1?auto=format&fit=crop&w=800&q=80">
+<h3>Wedding Buffet</h3>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1540189549336-e6e99c3679fe?auto=format&fit=crop&w=800&q=80">
+<h3>South Indian Meals</h3>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1562440499-64c9a111f713?auto=format&fit=crop&w=800&q=80">
+<h3>Desserts</h3>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1551218808-94e220e084d2?auto=format&fit=crop&w=800&q=80">
+<h3>Live Counters</h3>
+</div>
+
+</div>
+</section>
+
+
+<section class="section" id="blog">
+<h2>Latest Blogs</h2>
+
+<div class="cards">
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1601050690597-df0568f70950?auto=format&fit=crop&w=800&q=80">
+<h3>Top Vegetarian Dishes</h3>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1543353071-873f17a7a088?auto=format&fit=crop&w=800&q=80">
+<h3>Perfect Wedding Menu</h3>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=800&q=80">
+<h3>Healthy Catering</h3>
+</div>
+
+</div>
+</section>
+
+
+<section class="section" id="contact">
+<h2>Contact Us</h2>
+
+<div class="contact">
+
+<iframe
+src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15714.2816353913!2d78.8576!3d10.1234!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTDCsDA3JzM0LjIiTiA3OMKwNTEnMjcuNCJF!5e0!3m2!1sen!2sin!4v1620000000000"
+allowfullscreen
+loading="lazy">
+</iframe>
+
+<div>
+
+<h3>Address</h3>
+<p>Pilavadipatti, Puduvayal,<br>Sivaganga District, Tamil Nadu - 630108</p>
+
+<h3>Email</h3>
+<p>singaiganesan@gmail.com</p>
+
+<h3>Phone</h3>
+<p>
+📞 9442984779<br>
+📞 9442667759<br>
+📞 9486835207
+</p>
+</div>
+</div>
+</section>
+
+<footer class="footer">
+  <div>
+    <h3>Chettinad Catering</h3>
+    <p>Transforming your occasions into memorable moments.</p>
+  </div>
+  <div>
+    <h3>Services</h3>
+    <a href="#">Wedding</a>
+    <a href="#">Birthday</a>
+    <a href="#">Corporate</a>
+    <a href="#">House Warming</a>
+  </div>
+  <div>
+    <h3>Quick Links</h3>
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#menu">Menu</a>
+    <a href="#contact">Contact</a>
+  </div>
+  <div>
+    <h3>Follow Us</h3>
+    <a href="#">Facebook</a>
+    <a href="#">Instagram</a>
+    <a href="#">WhatsApp</a>
+  </div>
+</footer>
+
+<div style="background:#000; color:#fff; text-align:center; padding:15px;">
+  <p>© 2025 Chettinad Catering - All Rights Reserved</p>
+</div>
+
+<div class="modal" id="bookingModal">
+  <div class="modal-box">
+    <h2>📅 Book Catering</h2>
+    <form>
+      <input type="text" placeholder="Name" required>
+      <input type="tel" placeholder="Phone" required>
+      <select required>
+        <option value="" disabled selected>Select Occasion</option>
+        <option>Wedding</option>
+        <option>Birthday</option>
+        <option>Reception</option>
+        <option>Corporate</option>
+        <option>Other</option>
+      </select>
+      <input type="date" required>
+      <input type="number" placeholder="No. of Guests" required>
+      <button type="submit">Submit Inquiry</button>
+      <span id="closeModal">❌ Close</span>
+    </form>
+  </div>
+</div>
+
+<script>
+const openBtn = document.getElementById("openBooking");
+const modal = document.getElementById("bookingModal");
+const closeBtn = document.getElementById("closeModal");
+
+openBtn.onclick = function(e){
+  e.preventDefault();
+  modal.style.display = "flex";
+}
+
+closeBtn.onclick = function(){
+  modal.style.display = "none";
+}
+
+window.onclick = function(e){
+  if(e.target === modal){
+    modal.style.display = "none";
+  }
+}
+</script>
+
+</body>
+</html>
